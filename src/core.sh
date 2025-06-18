@@ -403,7 +403,7 @@ create() {
     config.json)
         get_port
         is_log='log:{access:"/var/log/'"$is_core"'/access.log",error:"/var/log/'"$is_core"'/error.log",loglevel:"warning"}'
-        is_dns='dns:{}'
+        is_dns='dns:{servers: ["https+local://dns.google/dns-query"]}'
         is_api='api:{tag:"api",services:["HandlerService","LoggerService","StatsService"]}'
         is_stats='stats:{}'
         is_policy_system='system:{statsInboundUplink:true,statsInboundDownlink:true,statsOutboundUplink:true,statsOutboundDownlink:true}'
